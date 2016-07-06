@@ -1,0 +1,11 @@
+# ignore temporary files:
+*~
+
+# Mac OS X file to store custom attributes of a folder
+.DS_Store
+
+# ignore example output
+#example/*
+
+# joe files:
+DEADJOE
