@@ -1,0 +1,85 @@
+= Vivado usage statistic at runtime
+
+The `vivado-stat.sh` script for Xilinx Vivado-tool: that prints CPU and Memory usage of all instances of Vivado tools
+
+== Usage
+Just type in cli:
+```
+./vivado-stat.sh
+```
+that run util which periodically prints the resource consumption.
+
+You can adjust following parameters:
+
+* `CMD` - the string contain process name for watching
+* `PERIOD` - integer value in sec for specify period of watch
+
+=== Example of running
+
+Sample of output for  `PERIOD = "30s"`:
+```
+$ ./vivado-stat.sh
+97%	   1265M
+99%	   1459M
+98%	   1570M
+98%	   1822M
+99%	   1948M
+99%	   2138M
+99%	   2531M
+99%	   2821M
+103% 	 2928M
+103%	 3098M
+428%	 7092M
+477%	 8959M
+446%	 10335M
+375%	 10408M
+435%	 11391M
+441%	 11633M
+460%	 13799M
+420%	 13966M
+404%	 14006M
+296%	 9994M
+*** vivado was finished running at 11:11 06.07.2016 ***
+$
+```
+
+== Limitation
+
+This script shows entire `vivado` processes of *all* users.
+For prints usage stat for current user should be modifyed script by adding `| grep $USER` filter on pipe
+
+== Explanation of working
+
+=== CPU
+
+* `ps -C ${CMD} -o pcpu=` - print all strings that contain of $CMD processes
+* `sed ':a;N;$!ba;s/\n/\+/g'` - that converts from multiline to oneline and inserts "+" sign between values; see bellow:
+** `:a`   - create a label 'a'
+** `N`    - append the next line to the pattern space
+** `$!`   - if not the last line
+** `ba`   - branch (go to) label 'a'
+** `s`    - substitute
+** `/\n/` - regex for new line
+** `/\+/` - with text "+" (\+ - for escaping character)
+** `g`    - global match (as many times as it can)
+* `bc -l` - pass string to simple calculator
+* `cut -d. -f1` - cutting float part of result number
+* `sed 's/$/%/'` - added "%" sign for CPU usage on the end of string
+
+=== MEM
+
+* `ps -C ${CMD} -o size=` - print all strings that contain of $CMD processes
+* `sed 's/$/\/1024/g'` - convert kB to MB (by 1k dividing every string)
+* `sed ':a;N;$!ba;s/\n/\+/g'` - see the CPU example above
+* `bc -l` - pass string to simple calculator
+* `cut -d. -f1` - cutting float part of result number
+* `sed 's/M/%/'` - added "M" char for RAM usage
+
+
+== ToDo
+
+* version with separate usage by users
+
+== Known issues
+
+* `size` or `vsize` use in `ps` command for RAM consumption? (currently use the `size`)
