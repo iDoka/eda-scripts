@@ -1,0 +1,30 @@
+= Collect of various scripts for working with EDA-tools (ASIC, FPGA, etc)
+Dmitry Murzinov <kakstattakim@gmail.com>
+v1.0, 6.7.2016
+:doctype: article
+:lang: en
+:stem:
+:grid: all
+:align: center
+:imagesdir: example???
+:homepage: http://idoka.ru
+
+== Intro
+
+== Script collection
+
+=== UCF2XDC converter
+
+The `ucf-to-xdc.sh` script for Xilinx EDA-tools: that convert ISE-style to Vivado-style constraints (sdc -> xdc)
+
+==== usage
+Just type:
+```
+./ucf-to-xdc.sh FILENAME.ucf
+```
+that produce the file `FILENAME.xdc` in current dir
+
+
+
+
+== References
