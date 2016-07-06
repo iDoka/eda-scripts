@@ -50,3 +50,12 @@ sed command explanation:
 ** ..`set_property IOSTANDARD  \3 \[get_ports \1\]\n`.. - generate IO-standard constraint
 ** ..`set_property VCCAUX_IO   \4 \[get_ports \1\]\n`.. - generate VCCAUX value constraint
 ** ..`set_property SLEW        \5 \[get_ports \1\]\n\n/g` -  generate slew rate constraint
+
+
+== ToDo
+
+* a position independent parser of ucf
+
+== Known issues
+
+* current version of parser ucf is a position dependent; for some ucf needed changing of order of mention key according input ucf
