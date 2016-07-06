@@ -13,6 +13,9 @@ v1.0, 6.7.2016
 
 == Script collection
 
+include::ucf-to-xdc.adoc[leveloffset=+2]
+
+
 === UCF2XDC converter
 
 The `ucf-to-xdc.sh` script for Xilinx EDA-tools: that convert ISE-style to Vivado-style constraints (sdc -> xdc)

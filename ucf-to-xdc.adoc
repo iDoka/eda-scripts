@@ -1,0 +1,52 @@
+= UCF2XDC converter
+
+The `ucf-to-xdc.sh` script for Xilinx EDA-tools: that convert ISE-style to Vivado-style constraints (sdc -> xdc)
+
+== usage
+Just type:
+```
+./ucf-to-xdc.sh FILENAME.ucf
+```
+that produce the file `FILENAME.xdc` in current dir
+
+=== input file example [ucf]
+```
+NET "DDR_DQ[0]"  LOC = "AY12"  |  IOSTANDARD = SSTL15_T_DCI  |  VCCAUX_IO = NORMAL  |  SLEW = FAST;
+NET "DDR_DQ[1]"  LOC = "AW12"  |  IOSTANDARD = SSTL15_T_DCI  |  VCCAUX_IO = NORMAL  |  SLEW = FAST;
+```
+
+=== output file example [xdc]
+```
+set_property PACKAGE_PIN AY12         [get_ports DDR_DQ[0]]
+set_property IOSTANDARD  SSTL15_T_DCI [get_ports DDR_DQ[0]]
+set_property VCCAUX_IO   NORMAL       [get_ports DDR_DQ[0]]
+set_property SLEW        FAST         [get_ports DDR_DQ[0]]
+
+set_property PACKAGE_PIN AW12         [get_ports DDR_DQ[1]]
+set_property IOSTANDARD  SSTL15_T_DCI [get_ports DDR_DQ[1]]
+set_property VCCAUX_IO   NORMAL       [get_ports DDR_DQ[1]]
+set_property SLEW        FAST         [get_ports DDR_DQ[1]]
+```
+
+== Limitation
+
+This script works only with IO-location and standard constraints
+
+== Explanation of working
+
+sed command explanation:
+
+* `/^$/d` - remove all empty strings
+* `s/[\"=|;]//g` - remove any of these symbols: `"`, `=`, `|`, `;`
+* `s/[\t]*//g` -  remove all horizontal tabulation symbol
+* `s/\ \{1,\}/\ /g` - replace several whitespaces by one (i.e.: `"    "` -> `" "`)
+* Formatting output string (parted by several string):
+** `s/NET[ ]*\(.*\)[ ]*`.. - extract signal name
+** ..`LOC[ ]*\([A-Z0-9]*\)[ ]*`.. - extract pin name
+** ..`IOSTANDARD[ ]*\([_A-Z0-9]*\)[ ]*`.. - extract IO-standard
+** ..`VCCAUX_IO[ ]*\([A-Z]*\)[ ]*`.. - extract VCCAUX value
+** ..`SLEW[ ]*\([A-Z]*\)/`.. - extract slewrate
+** ..`set_property PACKAGE_PIN \2 \[get_ports \1\]\n`.. - generate location constraint
+** ..`set_property IOSTANDARD  \3 \[get_ports \1\]\n`.. - generate IO-standard constraint
+** ..`set_property VCCAUX_IO   \4 \[get_ports \1\]\n`.. - generate VCCAUX value constraint
+** ..`set_property SLEW        \5 \[get_ports \1\]\n\n/g` -  generate slew rate constraint
