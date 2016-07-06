@@ -1,0 +1,25 @@
+
+
+
+  [ "$x" == "valid" ] && echo "valid" || echo "invalid"
+
+sed ':a;N;$!ba;s/\n/<text>/g'
+where:
+
+:a       - create a label 'a'
+N        - append the next line to the pattern space
+$!       - if not the last line
+ba       - branch (go to) label 'a'
+s        - substitute
+/\n/     - regex for new line
+/<text>/ - with text "<text>"
+g        - global match (as many times as it can)
+
+
+* http://linuxcommand.org/wss0100.php[Writing shell scripts - Lesson 10: Stay Out Of Trouble]
+* http://stackoverflow.com/questions/2237080/how-to-compare-strings-in-bash-script
+* http://wiki.bash-hackers.org/syntax/ccmd/conditional_expression
+* http://tldp.org/LDP/abs/html/comparison-ops.html
+* http://tldp.org/LDP/abs/html/loops1.html
+* http://ryanstutorials.net/bash-scripting-tutorial/bash-loops.php
+* http://www.canbike.org/information-technology/sed-delete-carriage-returns-and-linefeeds-crlf.html
