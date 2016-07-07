@@ -1,0 +1,46 @@
+
+=== Fake NIC create 
+
+The `fake-nic.sh` script for creating the (additional) HostID if your laptop don't have any wired Ethernet Adapter or many other cases :)
+
+
+== Usage
+
+. Customize variable  `$DEV` and `$MAC` in `fake-nic.sh`
+. Run it as `root`-user:
++
+```
+./fake-nic.sh
+```
++
+that install required dependencies on your system and add NIC with proper `$DEV` (name) and `$MAC` (hostid)
+
+=== Run on every bootup
+
+The quick and dirty way to bring up fake NIC on every bootup is adding to your `/etc/rc.local` strings like this:
+```
+  MAC="E4:7D:DE:AD:BE:EF"
+  DEV="eth1"
+  ip tuntap add ${DEV} mode tap
+  ifconfig ${DEV} hw ether ${MAC}
+  ifconfig ${DEV} up
+```
+
+
+== Limitation
+
+This script works only on OS RHEL/CentOS 6.x/7.x as well. OS checker is built-in.
+
+
+== Explanation of working
+
+see the source code [fake-nic.sh]
+
+== ToDo
+
+* DEV and MAC pass as argv
+* Create a systemd script executing for network activation
+
+== Known issues
+
+not yet

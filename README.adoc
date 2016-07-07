@@ -11,6 +11,7 @@ v1.0, 6.7.2016
 
 == Intro
 
+I hope that helps not only me
 
 
 == Script collection
@@ -31,4 +32,21 @@ Detailed description:
 include::vivado-stat.adoc[leveloffset=+2]
 
 
+=== Fake NIC create 
+
+The `fake-nic.sh` script for creating the (additional) HostID if your laptop don't have any wired Ethernet Adapter or many other cases :)
+
+Detailed description:
+include::fake-nic.adoc[leveloffset=+2]
+
+TIP: By the way Latest version of FLEXLM and SCL supports multiple HostID at same time, i.e. all eth* (not only eth0)
+
+
 == References
+
+* http://www.redhat.com/[RedHat]
+* http://www.centos.org/[CentOS]
+* http://www.xilinx.com/[Xilinx]
+* http://www.altera.com/[Altera]
+
+
