@@ -34,7 +34,7 @@ This script works only on OS RHEL/CentOS 6.x/7.x as well. OS checker is built-in
 
 == Explanation of working
 
-see the source code [fake-nic.sh]
+see the source code fake-nic.sh[fake-nic.sh]
 
 == ToDo
 
