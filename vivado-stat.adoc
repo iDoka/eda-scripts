@@ -45,8 +45,15 @@ $
 
 == Limitation
 
+.Obsolete:
+
 This script shows entire `vivado` processes of *all* users.
 For prints usage stat for current user should be modifyed script by adding `| grep $USER` filter on pipe
+
+.Updated:
+
+Done! Please use the `vivado-stat-user.sh` script for per-user stat of Vivado usage.
+
 
 == Explanation of working
 
@@ -78,8 +85,10 @@ For prints usage stat for current user should be modifyed script by adding `| gr
 
 == ToDo
 
-* start and stop watching between vivado startup without exit
-* version with separate usage by users
+[options="readonly"]
+* [x] version with separate usage by users
+* [ ] start and stop watching between vivado startup without exit
+
 
 == Known issues
 
