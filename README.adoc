@@ -32,7 +32,7 @@ Detailed description:
 include::vivado-stat.adoc[leveloffset=+2]
 
 
-=== Fake NIC create 
+=== Fake NIC create
 
 The `fake-nic.sh` script for creating the (additional) HostID if your laptop don't have any wired Ethernet Adapter or many other cases :)
 
@@ -40,6 +40,14 @@ Detailed description:
 include::fake-nic.adoc[leveloffset=+2]
 
 TIP: By the way Latest version of FLEXLM and SCL supports multiple HostID at same time, i.e. all eth* (not only eth0)
+
+
+=== Build-in revision number into FPGA-image
+
+The `vergen-fpga.sh` script make imprinting build date and FW-hashsum intro FW-image
+
+Detailed description:
+include::vergen-fpga.adoc[leveloffset=+2]
 
 
 == References
