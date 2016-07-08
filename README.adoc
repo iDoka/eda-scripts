@@ -44,7 +44,7 @@ TIP: By the way Latest version of FLEXLM and SCL supports multiple HostID at sam
 
 == References
 
-* scratch.adoc[Notes]
+* link:scratch.adoc[Notes]
 
 ////
 * http://www.redhat.com/[RedHat]
