@@ -29,7 +29,7 @@ FPGAIMAGE=fpgaimage.hex
 
 
 ######### Setup output format #############
-case $OS_VERSION in
+case $2 in
 ### For Intel ihex ###
 [iI]*)
   FORMAT=intel
