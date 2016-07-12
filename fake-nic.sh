@@ -12,8 +12,16 @@
 ##  License    : MIT
 #######################################################################################
 
+# user should be a root
+if [ "$(id -u)" != "0" ]; then
+  echo "This script must be run as root"
+  exit 1
+fi
+
+# OS version detect
 OS_VERSION=`uname -r | sed 's/[0-9.\-]*el\([0-9]*\)[a-zA-Z0-9_.]*/\1/g'`
 
+# setup HostID and device
 MAC="E4:7D:DE:AD:BE:EF"
 DEV="eth1"
 
