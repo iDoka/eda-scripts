@@ -4,7 +4,7 @@
 ##  Designer   : Dmitry Murzinov (kakstattakim@gmail.com)
 ##  Link       : https://github.com/iDoka/eda-scripts
 ##  Module     : (Additional) NIC-adaptor creator
-##  Description: create virtual NIC with manually specifyed HostID 
+##  Description: create virtual NIC with manually specifyed HostID
 ##               (of course, pick any random MAC)
 ##  Usage      : refer to fake-nic.adoc for usage help
 ##  Revision   : $Rev
@@ -24,14 +24,14 @@ case $OS_VERSION in
   ifconfig ${DEV} hw ether ${MAC}
   ifconfig ${DEV} up
 ;;
-7*) # RHEL/CentOS 7            
+7*) # RHEL/CentOS 7
   yum install -y bridge-utils
   ip tuntap add ${DEV} mode tap
   ifconfig ${DEV} hw ether ${MAC}
   ifconfig ${DEV} up
-;;    
+;;
 *) # unsupported OS
   echo "Your OS is unsupported"
 ;;
 esac
-  
+
