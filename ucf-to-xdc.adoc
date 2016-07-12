@@ -55,6 +55,12 @@ sed command explanation:
 == ToDo
 
 * a position independent parser of ucf
+* move to new one-string format of xdc, like this:
++
+```
+set_property -dict {PACKAGE_PIN AY12  IOSTANDARD SSTL15_T_DCI  VCCAUX_IO NORMAL  SLEW FAST} [get_ports DDR_DQ[0]];
+```
+
 
 == Known issues
 
