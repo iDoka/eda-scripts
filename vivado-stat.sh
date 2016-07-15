@@ -15,13 +15,16 @@
 CMD="vivado"
 PERIOD="1s"
 
-while true; do 
+PID=`ps aux | grep ${CMD} | grep lnx64.o | sed 's/\ \{1,\}/\ /g' | cut -d' ' -f2`
+
+while true; do
   IS_RUN=`ps -C ${CMD} -o comm= | head -1`
   #[ -n ${IS_RUN} ] || break
   if [ "${IS_RUN}" == "" ]; then
     break
   fi
-  CPU=`ps -C ${CMD} -o pcpu= | sed ':a;N;$!ba;s/\n/\+/g' | bc -l | cut -d. -f1 | sed 's/$/%/'`
+  #CPU=`ps -C ${CMD} -o pcpu= | sed ':a;N;$!ba;s/\n/\+/g' | bc -l | cut -d. -f1 | sed 's/$/%/'`
+  CPU=`top -p $PID -n1 | awk '{if (NR==8) print $10 }' | cut -d. -f1 | sed 's/$/%/'`
   MEM=`ps -C ${CMD} -o size= | sed 's/$/\/1024/g' | sed ':a;N;$!ba;s/\n/\+/g' | bc -l | cut -d. -f1 | sed 's/$/M/'`
   echo -e "$CPU\t$MEM"
   sleep ${PERIOD}
