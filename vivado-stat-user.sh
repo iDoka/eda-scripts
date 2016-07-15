@@ -26,7 +26,8 @@ while true; do
     break
   fi
   #CPU=`ps -C ${CMD} -o user=,pcpu= | grep $USER | sed 's/\ \{1,\}/\ /g' | cut -d' ' -f2 | sed ':a;N;$!ba;s/\n/\+/g' | bc -l | cut -d. -f1 | sed 's/$/%/'`
-  CPU=`top -p $PID -n1 | awk '{if (NR==8) print $10 }' | cut -d. -f1 | sed 's/$/%/'`
+  #CPU=`top -p ${PID} -n1 | awk '{if (NR==8) print $10 }' | cut -d. -f1 | sed 's/$/%/'`
+  CPU=`top -p ${PIDS} -n1 | awk '{if (NR>=8) print $10 }' | sed '/^$/d' | sed ':a;N;$!ba;s/\n/\+/g' | bc -l | cut -d. -f1 | sed 's/$/%/'`
   MEM=`ps -C ${CMD} -o user=,size= | grep $USER | sed 's/\ \{1,\}/\ /g' | cut -d' ' -f2 | sed 's/$/\/1024/g' | sed ':a;N;$!ba;s/\n/\+/g' | bc -l | cut -d. -f1 | sed 's/$/M/'`
   echo -e "$CPU\t$MEM"
   sleep ${PERIOD}
