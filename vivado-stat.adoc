@@ -88,8 +88,11 @@ Done! Please use the `vivado-stat-user.sh` script for per-user stat of Vivado us
 [options="readonly"]
 * [x] version with separate usage by users
 * [ ] start and stop watching between vivado startup without exit
+* [ ] move from `ps` to `top -p $PID -n1 | awk '{if (NR==8) print $10 }'`
 
 
 == Known issues
 
 * `size` or `vsize` use in `ps` command for RAM consumption? (currently use the `size`)
+* fake CPU% used on the `ps` cmd. For detail read http://unix.stackexchange.com/questions/58539/top-and-ps-not-showing-the-same-cpu-result[Top and ps not showing the same cpu result]
+
