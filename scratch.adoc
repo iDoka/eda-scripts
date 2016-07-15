@@ -15,6 +15,7 @@ printf "$user:$(openssl passwd -crypt $pass)\n" >> /etc/nginx/.htpasswd
 ```
 
 
+
   $ echo 'NET "ddr3_dq0" LOC = "AY12" | IOSTANDARD = SSTL15_T_DCI | VCCAUX_IO = NORMAL | SLEW = FAST;' | sed '/^$/d;s/[\"=|;]//g;s/[\t]*//g;s/\ \{1,\}/\ /g' | sed 's/NET[ ]*\([_a-zA-Z0-9]*\)[ ]*LOC[ ]*\([A-Z0-9]*\)[ ]*IOSTANDARD[ ]*\([_A-Z0-9]*\)[ ]*VCCAUX_IO[ ]*\([A-Z]*\)[ ]*SLEW[ ]*\([A-Z]*\)/\1 \2 \3 \4 \5/g'
 
   $ echo 'NET "ddr3_dq[0]" LOC = "AY12" | IOSTANDARD = SSTL15_T_DCI | VCCAUX_IO = NORMAL | SLEW = FAST;' | sed '/^$/d;s/[\"=|;]//g;s/[\t]*//g;s/\ \{1,\}/\ /g'
