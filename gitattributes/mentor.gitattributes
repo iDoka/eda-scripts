@@ -1,0 +1,10 @@
+#########################################################################################
+##  Project    : Collect of various scripts for working with EDA-tools (ASIC/FPGA/etc) ##
+##  Designer   : Dmitry Murzinov (kakstattakim@gmail.com)                              ##
+##  Link       : https://github.com/iDoka/eda-scripts                                  ##
+##  Description: .gitattributes                                                        ##
+##  Usage      : just rename or add contain to .gitattributes                          ##
+##  License    : MIT                                                                   ##
+#########################################################################################
+
+*.do   text

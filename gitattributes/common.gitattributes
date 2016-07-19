@@ -1,0 +1,97 @@
+#########################################################################################
+##  Project    : Collect of various scripts for working with EDA-tools (ASIC/FPGA/etc) ##
+##  Designer   : Dmitry Murzinov (kakstattakim@gmail.com)                              ##
+##  Link       : https://github.com/iDoka/eda-scripts                                  ##
+##  Description: .gitattributes                                                        ##
+##  Usage      : just rename or add contain to .gitattributes                          ##
+##  License    : MIT                                                                   ##
+#########################################################################################
+
+# Handle line endings automatically for files detected as text and leave all files detected as binary untouched
+# Auto detect text files and perform LF normalization
+* text=auto
+
+
+### git
+.gitattributes  text
+.gitignore      text
+.gitmodules     text
+.gitkeep        text
+
+
+##### HDL
+*.v    text
+*.vh   text
+*.sv   text
+*.svh  text
+*.opt  text
+
+
+### reports
+# *.rpt  text
+# *.log  text
+
+
+### script
+*.tcl    text
+*.setup  text
+*.prj  text
+*.m    text
+*.py   text
+*.pl   text
+*.php  text
+*.sh   text
+*.bash text
+*.awk  text
+*.m4   text
+Makefile   text
+*.makefile text
+*.mk   text
+
+
+### other extensions
+*.c   text
+*.h   text
+*.dat text
+
+
+### Documents
+README  text
+TODO    text
+BUGS    text
+*.md    text
+*.markdown  text
+*.adoc  text
+*.textile   text
+*.asciidoc  text
+*.docbook   text
+*.csv   text
+*.txt   text
+*.rst   text
+*.list  text
+
+
+### Graphics
+*.png  binary diff=exif
+*.jpg  binary diff=exif
+*.jpeg binary diff=exif
+*.gif  binary
+*.ico  binary
+*.svg  text
+
+
+### meta
+*.xml  text
+*.json text
+
+
+### These files are binary and should be left untouched
+### (binary is a macro for -text -diff)
+*.gz  binary
+*.tgz binary
+*.bz2 binary
+*.tar binary
+*.zip binary
+*.rar binary
+*.7z  binary
+*.ttf binary
