@@ -44,8 +44,8 @@ done
 ########## git repo setting
 cd ${GIT_DIR}
 git init
-git config user.name  $GIT_USER
-git config user.email $GIT_MAIL
+git config user.name  "${GIT_USER}"
+git config user.email  ${GIT_MAIL}
 git config color.ui true
 git config format.pretty oneline
 git add .gitattributes .gitignore
