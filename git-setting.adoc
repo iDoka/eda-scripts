@@ -1,0 +1,62 @@
+=  Initial git settings of new EDA-related repository
+
+== Synopsis
+
+The `git-setting.sh` script create empty repo in speciffyed location and set up required setting for EDA-related projects (at the first one: the proper `.gitattributes` and `.gitignore` files)
+
+== Getting Started
+
+=== Prerequisites
+
+You need to install the finger client:
+
+  yum install -y finger
+
+
+=== Installing
+
+Not needed to install
+
+
+=== Usage
+
+Just type:
+
+```
+./git-setting.sh /path/to/your/repo
+```
+
+that produce required settings and files into `/path/to/your/repo` folder
+
+
+
+== Limitation
+
+This script works only with IO-location and standard constraints
+
+== Explanation of working
+
+sed command explanation:
+
+* `sed '1,8d'`  - cut first 8 strings of file
+
+== ToDo
+
+* [ ] Checking existence of `$GIT_DIR`, if not exist - create it by `mkdir -p $GIT_DIR`
+* [ ] Create typical EDA-project structure tree
+
+
+== Known issues
+
+Not yet
+
+== License
+
+This project is licensed under the MIT License - see the  link:LICENSE[] file for details
+
+== References
+
+
+----
+
+Feel free to send me comments, suggestions and bug reports
