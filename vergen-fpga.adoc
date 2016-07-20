@@ -1,0 +1,5 @@
+= Build-in revision number into FPGA-image
+
+The `vergen-fpga.sh` script make imprinting build date and FW-hashsum intro FW-image
+
+
