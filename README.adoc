@@ -50,6 +50,21 @@ Detailed description:
 include::vergen-fpga.adoc[leveloffset=+2]
 
 
+
+===  Initial git settings of new EDA-related repository
+
+
+The `git-setting.sh` script create empty repo in speciffyed location and set up required setting for EDA-related projects (at the first one: the proper `.gitattributes` and `.gitignore` files)
+
+Detailed description:
+include::git-setting.adoc[leveloffset=+2]
+
+
+
+== License
+
+This project is licensed under the MIT License - see the  link:LICENSE[] file for details
+
 == References
 
 * link:scratch.adoc[Notes]
@@ -60,4 +75,9 @@ include::vergen-fpga.adoc[leveloffset=+2]
 * http://www.xilinx.com/[Xilinx]
 * http://www.altera.com/[Altera]
 ////
+
+
+----
+
+Feel free to send me comments, suggestions and bug reports
 

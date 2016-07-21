@@ -43,8 +43,38 @@ where:
 * /<text>/ - with text "<text>"
 * g        - global match (as many times as it can)
 
+
+=== how to check if $1 and $2 are null?
+
+Try using the -z test:
+  if [ -z "$1" ] && [ -z "$2" ]
+
+From man bash:
+  -z string
+  True if the length of string is zero.
+
+----
+
+```
+if [ "$#" -ne 1 ]; then
+    echo "Illegal number of parameters"
+fi
+```
+
+Or
+
+```
+if test "$#" -ne 1; then
+    echo "Illegal number of parameters"
+fi
+```
+
+
 ---------------
 
+* http://askubuntu.com/questions/444082/how-to-check-if-1-and-2-are-null[how to check if $1 and $2 are null?]
+* http://stackoverflow.com/questions/18568706/checking-number-of-arguments-bash-script[checking number of arguments bash script]
+* http://stackoverflow.com/questions/6482377/check-existence-of-input-argument-in-a-bash-shell-script[Check existence of input argument in a Bash shell script]
 
 * http://linuxcommand.org/wss0100.php[Writing shell scripts - Lesson 10: Stay Out Of Trouble]
 * http://stackoverflow.com/questions/2237080/how-to-compare-strings-in-bash-script
