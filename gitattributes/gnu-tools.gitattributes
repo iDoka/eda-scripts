@@ -9,3 +9,7 @@
 
 # gtkwave viever
 *.gtkw
+
+## CI system
+.travis.yml
+

@@ -6,3 +6,7 @@
 ##  Usage      : just rename or add contain to .gitattributes                          ##
 ##  License    : MIT                                                                   ##
 #########################################################################################
+
+*.sof text
+*.qsf text
+*.qpf text

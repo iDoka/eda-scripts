@@ -6,3 +6,10 @@
 ##  Usage      : just rename or add contain to .gitignore                              ##
 ##  License    : MIT                                                                   ##
 #########################################################################################
+
+#### dump files
+*.vcd
+*.lxt
+
+#### iverilog compiled binaries
+*.vvp
