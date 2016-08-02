@@ -7,43 +7,13 @@
 ##  License    : MIT                                                                   ##
 #########################################################################################
 
-## log files
-*.log
-*.rpt
-
-## bitstream
-*.bit
-
-## netlist
-*.edf
-*.edif
-*.vn
-
-## SDF
-*.sdf
-
-###### for Xilinx Vivado|ISE
-.Xil/
-fsm_encoding.os
-tab_*/
-webtalk.jou
-webtalk.log
-webtalk_*.jou
-webtalk_*.log
-vivado.jou
-vivado.log
-vivado_pid*.str
-hs_err_pid*
-xelab.*
-xsim.*
-xvlog.*
-*.cache
-*.sim
-*.runs
-*.hw
-*.backup.*
-*.debug
-
-
-unisims
-
+*.eep
+*.elf
+*.hex
+*.lss
+*.lst
+*.map
+*.o
+*.swp
+*.sym
+.dep

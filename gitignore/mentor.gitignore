@@ -15,5 +15,9 @@
 *.vpd
 *.vcd
 command.log
-sim/bin/work
+work/
+sim/bin/work/
+modelsim.ini
 sim/bin/modelsim.ini
+
+transcript

@@ -8,11 +8,15 @@
 #########################################################################################
 
 ## decline some garbage from synopsys tools
+
+## Design Compiler
 *.mr
 *.pvl
 *.syn
 *.svf
-simv.daidir/
+
+
+## Leda
 .leda_work
 leda-libs/
 leda-logs/
@@ -20,10 +24,17 @@ leda*.log
 leda.inf
 leda.pro
 .bbox_for_block_check
-.synopsys_dve_serverport.txt
+
 
 ##
 *.swo
 *.swm
 *.swn
 *.swl
+
+## vcs garbage
+simv*
+csrc/
+DVEfiles/
+simv.daidir/
+.synopsys_dve_serverport.txt
