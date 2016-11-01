@@ -14,12 +14,13 @@ php xilinx-pll-calc.php
 ```
 +
 and looking for bold green string with exactly frequency value:
-
++
 image::/image/xilinx-pll-calc.png?raw=true[]
 
 == Limitation
 
 This script supports following family:
+
 * Xilinx Spartan-6
 * Xilinx Virtex-7
 * [Add your favourite FPGA. See next chapter]
@@ -27,7 +28,7 @@ This script supports following family:
 
 === Adding new FPGA family
 
-Xilinx, Altera, Lattice?... Everything can be supported!
+Xilinx, Altera, Lattice?... Everything vendor & family can be supported!
 
 The quick and dirty way to adding new family is filling associated array like that:
 ```
