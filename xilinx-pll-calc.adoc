@@ -14,7 +14,8 @@ php xilinx-pll-calc.php
 ```
 +
 and looking for bold green string with exactly frequency value:
-image::image/xilinx-pll-calc.png[]
+
+image::/image/xilinx-pll-calc.png?raw=true[]
 
 == Limitation
 
