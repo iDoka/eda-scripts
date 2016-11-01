@@ -54,12 +54,18 @@ include::vergen-fpga.adoc[leveloffset=+2]
 ===  Initial git settings of new EDA-related repository
 
 
-The `git-setting.sh` script create empty repo in speciffyed location and set up required setting for EDA-related projects (at the first one: the proper `.gitattributes` and `.gitignore` files)
+The `git-setting.sh` script create empty repo in specifyed location and set up required setting for EDA-related projects (at the first one: the proper `.gitattributes` and `.gitignore` files)
 
 Detailed description:
 include::git-setting.adoc[leveloffset=+2]
 
 
+=== Find proper parameters for getting desired Frequency value by PLL/DCM block of Xilinx FPGA
+
+The `xilinx-pll-calc.php` script print table of proper parameters for desired output frequency (based on known input frequency)  
+
+Detailed description:
+include::xilinx-pll-calc.adoc[leveloffset=+2]
 
 == License
 
