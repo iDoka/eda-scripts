@@ -36,5 +36,7 @@ leda.pro
 simv*
 csrc/
 DVEfiles/
-simv.daidir/
+*.daidir/
 .synopsys_dve_serverport.txt
+AN.DB/
+.vlogansetup*
