@@ -2,4 +2,4 @@
 
 The `vergen-fpga.sh` script make imprinting build date and FW-hashsum intro FW-image
 
-
+Russian description available here: http://idoka.ru/my-fpga-and-asic-scripts/#___FPGA
