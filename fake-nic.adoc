@@ -2,6 +2,7 @@
 
 The `fake-nic.sh` script for creating the (additional) HostID if your laptop don't have any wired Ethernet Adapter or many other cases :)
 
+Russian description available here: http://idoka.ru/my-fpga-and-asic-scripts/#__ethX_c_MAC
 
 == Usage
 
