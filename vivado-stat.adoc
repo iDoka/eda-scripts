@@ -2,6 +2,8 @@
 
 The `vivado-stat.sh` script for Xilinx Vivado-tool: that prints CPU and Memory usage of all instances of Vivado tools
 
+Russian description available here: http://idoka.ru/my-fpga-and-asic-scripts/#__Xilinx_Vivado
+
 == Usage
 Just type in cli:
 ```
