@@ -2,6 +2,7 @@
 
 The `xilinx-pll-calc.php` script print table of proper parameters for desired output frequency (based on known input frequency)  
 
+Russian description available here: http://idoka.ru/my-fpga-and-asic-scripts/#__PLLDCM_Xilinx_FPGA
 
 == Usage
 
