@@ -1,5 +1,7 @@
 =  Initial git settings of new EDA-related repository
 
+Russian description available here: http://idoka.ru/my-fpga-and-asic-scripts/#_git__ASICFPGA
+
 == Synopsis
 
 The `git-setting.sh` script create empty repo in speciffyed location and set up required setting for EDA-related projects (at the first one: the proper `.gitattributes` and `.gitignore` files)
