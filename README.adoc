@@ -6,13 +6,14 @@ v1.0, 6.7.2016
 :stem:
 :grid: all
 :align: center
-:imagesdir: example???
+:imagesdir: image
 :homepage: http://idoka.ru
 
 == Intro
 
 I hope that helps not only me
 
+NOTE: Russian description available here: http://idoka.ru/my-fpga-and-asic-scripts/
 
 == Script collection
 
