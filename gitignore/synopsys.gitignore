@@ -40,3 +40,9 @@ DVEfiles/
 .synopsys_dve_serverport.txt
 AN.DB/
 .vlogansetup*
+inter.vpd
+simv/
+ucli.key
+vcs.log
+
+
