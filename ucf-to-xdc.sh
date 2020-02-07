@@ -11,8 +11,10 @@
 ##  License    : MIT
 #######################################################################################
 
-
-FILE=`basename $1 | cut -d. -f1`
+UCFNAME=`basename $1`
+DOTCOUNT=`echo ${UCFNAME} | sed 's/[^.]//g' | awk '{ print length }'`
+FILE=`basename $1 | cut -d. -f-${DOTCOUNT}`
+DIR=`dirname $1`
 # echo "${FILE}"
 
 ##### obsolete syntax (saved for references):
@@ -21,5 +23,6 @@ FILE=`basename $1 | cut -d. -f1`
 
 
 sed '/^$/d;s/[\"=|;]//g;s/[\t]*//g;s/\ \{1,\}/\ /g;s/NET[ ]*\(.*\)[ ]*LOC[ ]*\([A-Z0-9]*\)[ ]*IOSTANDARD[ ]*\([_A-Z0-9]*\)[ ]*VCCAUX_IO[ ]*\([A-Z]*\)[ ]*SLEW[ ]*\([A-Z]*\)/set_property -dict \{PACKAGE_PIN \2 \tIOSTANDARD \3 \tVCCAUX_IO \4 \tSLEW \5\} \[get_ports \1\];\n/g' \
-  $FILE.ucf > $FILE.xdc
-  
+  $1 > $DIR/$FILE.xdc
+#  $FILE.ucf > $FILE.xdc
+
