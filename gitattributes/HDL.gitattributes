@@ -1,0 +1,13 @@
+### verilog
+*.v  linguist-language=Verilog
+*.vh linguist-language=Verilog
+
+### sv
+*.sv  linguist-language=SystemVerilog
+*.svh linguist-language=SystemVerilog
+
+### tcl
+*.sdc  linguist-language=TCL
+*.xdc  linguist-language=TCL
+ 
+ 
