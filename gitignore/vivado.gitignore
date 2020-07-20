@@ -24,6 +24,11 @@
 
 ###### for Xilinx Vivado|ISE
 .Xil/
+.hbs/
+.cache/
+xsim.dir/
+
+worklib.tb.wdb
 fsm_encoding.os
 tab_*/
 webtalk.jou
