@@ -3,6 +3,9 @@
 
 ## Vivado
 
+![Vivado log colorizers](/image/vivado-colorize.png?raw=true[])
+
+
 ### SED syntax explanation
 
 * `'/\(^#.*\)/d'` - delete all command echo in log
