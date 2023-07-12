@@ -8,6 +8,15 @@ v1.0, 6.7.2016
 :align: center
 :imagesdir: image
 :homepage: http://idoka.ru
+// added 12.07.2023:
+:idprefix:
+:idseparator: -
+ifndef::env-github[:icons: font]
+ifdef::env-github[]
+:note-caption: :paperclip:
+:tip-caption: :bulb:
+endif::[]
+
 
 == Intro
 
