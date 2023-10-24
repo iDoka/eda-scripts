@@ -17,6 +17,7 @@ ifdef::env-github[]
 :tip-caption: :bulb:
 endif::[]
 
+image:https://img.shields.io/badge/-Vivado-FF1010.svg?logo=xilinx&logoColor=ffffff[vivado] image:https://img.shields.io/badge/-Quartus-blue.svg?logo=intel&logoColor=ffffff[quartus]
 
 == Intro
 
