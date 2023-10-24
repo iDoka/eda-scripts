@@ -1,7 +1,7 @@
 # EDA log colorizers
 
 
-## Vivado
+## Vivado ![vivado](https://img.shields.io/badge/-Vivado-FF1010.svg?logo=xilinx&logoColor=ffffff)
 
 ![Vivado log colorizers](/image/vivado-colorize.png?raw=true[])
 
