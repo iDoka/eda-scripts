@@ -28,7 +28,7 @@ NOTE: Russian description available here: http://idoka.ru/my-fpga-and-asic-scrip
 
 === UCF2XDC converter
 
-https://img.shields.io/badge/-Vivado-FF1010.svg?logo=xilinx&logoColor=ffffff[vivado]  The `ucf-to-xdc.sh` script for Xilinx EDA-tools: that convert ISE-style to Vivado-style constraints (sdc -> xdc)
+image::https://img.shields.io/badge/-Vivado-FF1010.svg?logo=xilinx&logoColor=ffffff[vivado]  The `ucf-to-xdc.sh` script for Xilinx EDA-tools: that convert ISE-style to Vivado-style constraints (sdc -> xdc)
 
 Detailed description:
 include::ucf-to-xdc.adoc[leveloffset=+2]
@@ -36,7 +36,7 @@ include::ucf-to-xdc.adoc[leveloffset=+2]
 
 === Vivado usage runtime statistic
 
-https://img.shields.io/badge/-Vivado-FF1010.svg?logo=xilinx&logoColor=ffffff[vivado] The `vivado-stat.sh` script for Xilinx Vivado-tool: that prints CPU and Memory usage of all instances of Vivado tools
+image::https://img.shields.io/badge/-Vivado-FF1010.svg?logo=xilinx&logoColor=ffffff[vivado] The `vivado-stat.sh` script for Xilinx Vivado-tool: that prints CPU and Memory usage of all instances of Vivado tools
 
 Detailed description:
 include::vivado-stat.adoc[leveloffset=+2]
