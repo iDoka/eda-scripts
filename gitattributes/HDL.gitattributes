@@ -1,12 +1,15 @@
 ### verilog
+### See: https://github.com/github-linguist/linguist/blob/v7.30.0/lib/linguist/languages.yml#L7556
 *.v  linguist-language=Verilog
 *.vh linguist-language=Verilog
 
 ### sv
+### See: https://github.com/github-linguist/linguist/blob/v7.30.0/lib/linguist/languages.yml#L7033
 *.sv  linguist-language=SystemVerilog
 *.svh linguist-language=SystemVerilog
 
 ### tcl
+### See: https://github.com/github-linguist/linguist/blob/v7.30.0/lib/linguist/languages.yml#L7130
 *.tcl  linguist-language=TCL
 *.sdc  linguist-language=TCL
 *.xdc  linguist-language=TCL
